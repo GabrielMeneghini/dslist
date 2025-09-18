@@ -8,6 +8,7 @@ import java.util.Objects;
 @Table(name = "games")
 public class Game {
 
+    // Fields --------------------------------------------------------------------------------
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -18,7 +19,7 @@ public class Game {
     private Integer year;
 
     private String genre;
-    
+
     private String platforms;
 
     private Double score;
@@ -31,8 +32,10 @@ public class Game {
     @Column(columnDefinition = "TEXT")
     private String longDescription;
 
+    // Construtores -----------------------------------------------------------------------
     public Game() {
     }
+
     public Game(String title, Integer year, String genre, String platforms, Double score, String imgUrl, String shortDescription, String longDescription) {
         this.title = title;
         this.year = year;
@@ -44,6 +47,28 @@ public class Game {
         this.longDescription = longDescription;
     }
 
+    // Getters and Setters ----------------------------------------------------------------
+    public Long getId() {
+        return id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public Integer getYear() {
+        return year;
+    }
+
+    public String getImgUrl() {
+        return imgUrl;
+    }
+
+    public String getShortDescription() {
+        return shortDescription;
+    }
+
+    // Hashcode and Equals ------------------------------------------------------------------
     @Override
     public boolean equals(Object object) {
         if (this == object) return true;
