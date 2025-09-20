@@ -68,6 +68,22 @@ public class Game {
         return shortDescription;
     }
 
+    public String getGenre() {
+        return genre;
+    }
+
+    public String getPlatforms() {
+        return platforms;
+    }
+
+    public Double getScore() {
+        return score;
+    }
+
+    public String getLongDescription() {
+        return longDescription;
+    }
+
     // Hashcode and Equals ------------------------------------------------------------------
     @Override
     public boolean equals(Object object) {
