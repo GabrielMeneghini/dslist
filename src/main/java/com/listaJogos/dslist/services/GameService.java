@@ -1,6 +1,7 @@
 package com.listaJogos.dslist.services;
 
 import com.listaJogos.dslist.dtos.GameDTO;
+import com.listaJogos.dslist.dtos.GameListDTO;
 import com.listaJogos.dslist.dtos.GameMinDTO;
 import com.listaJogos.dslist.repositories.GameRepository;
 import com.listaJogos.dslist.services.exceptions.ResourceNotFoundException;
@@ -18,7 +19,7 @@ public class GameService {
 
     @Transactional(readOnly = true)
     public List<GameMinDTO> findAll() {
-        return gameRepository.findAll().stream().map(g -> new GameMinDTO(g)).toList();
+        return gameRepository.findAll().stream().map(GameMinDTO::new).toList();
     }
 
     @Transactional(readOnly = true)

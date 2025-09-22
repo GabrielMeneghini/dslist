@@ -24,6 +24,15 @@ public class GameList {
         this.name = name;
     }
 
+    // Getters and Setters ----------------------------------------------------------------
+    public Long getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
     // Hashcode and Equals ------------------------------------------------------------------
     @Override
     public boolean equals(Object object) {
