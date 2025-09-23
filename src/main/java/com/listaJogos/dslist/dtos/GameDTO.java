@@ -20,7 +20,7 @@ public record GameDTO(Long id,
                 entity.getPlatforms(),
                 entity.getScore(),
                 entity.getImgUrl(),
-                entity.getShortDescription()
+                entity.getLongDescription()
         );
     }
 
