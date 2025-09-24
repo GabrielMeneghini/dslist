@@ -2,7 +2,6 @@ package com.listaJogos.dslist.controllers;
 
 import com.listaJogos.dslist.dtos.GameListDTO;
 import com.listaJogos.dslist.dtos.GameMinDTO;
-import com.listaJogos.dslist.projections.GameMinProjection;
 import com.listaJogos.dslist.services.GameListService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
