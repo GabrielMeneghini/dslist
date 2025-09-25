@@ -5,7 +5,7 @@ import com.listaJogos.dslist.projections.GameMinProjection;
 
 public record GameMinDTO(Long id,
                          String title,
-                         Integer year,
+                         Integer gameYear,
                          String imgUrl,
                          String shortDescription) {
 
@@ -23,7 +23,7 @@ public record GameMinDTO(Long id,
         this(
                 projection.getId(),
                 projection.getTitle(),
-                projection.getYear(),
+                projection.getGameYear(),
                 projection.getImgUrl(),
                 projection.getShortDescription()
         );
