@@ -2,7 +2,6 @@ package com.listaJogos.dslist.services;
 
 import com.listaJogos.dslist.dtos.GameListDTO;
 import com.listaJogos.dslist.dtos.GameMinDTO;
-import com.listaJogos.dslist.entities.Game;
 import com.listaJogos.dslist.repositories.GameListRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -33,9 +32,9 @@ public class GameListService {
 
         // Updating the position of the affected elements on the DB
         if(sourceIndex > destinationIndex) {
-            gameListRepository.updatePositionUp(listId, sourceIndex, destinationIndex);
+            gameListRepository.updatePositionsUp(listId, sourceIndex, destinationIndex);
         } else {
-            gameListRepository.updatePositionDown(listId, sourceIndex, destinationIndex);
+            gameListRepository.updatePositionsDown(listId, sourceIndex, destinationIndex);
         }
 
         // Updating the position of the moved element on the DB

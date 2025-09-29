@@ -1,7 +1,6 @@
 package com.listaJogos.dslist.services;
 
 import com.listaJogos.dslist.dtos.GameDTO;
-import com.listaJogos.dslist.dtos.GameListDTO;
 import com.listaJogos.dslist.dtos.GameMinDTO;
 import com.listaJogos.dslist.repositories.GameRepository;
 import com.listaJogos.dslist.services.exceptions.ResourceNotFoundException;

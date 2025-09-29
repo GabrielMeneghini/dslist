@@ -53,7 +53,7 @@ public interface GameListRepository extends JpaRepository<GameList, Long> {
                 AND b.position >= :destinationIndex
                 AND b.position < :sourceIndex
             """)
-    void updatePositionUp(@Param("listId") Long listId, @Param("sourceIndex") int sourceIndex, @Param("destinationIndex") int destinationIndex);
+    void updatePositionsUp(@Param("listId") Long listId, @Param("sourceIndex") int sourceIndex, @Param("destinationIndex") int destinationIndex);
 
     @Modifying
     @Query("""
@@ -63,6 +63,6 @@ public interface GameListRepository extends JpaRepository<GameList, Long> {
                 AND b.position <= :destinationIndex
                 AND b.position > :sourceIndex
             """)
-    void updatePositionDown(@Param("listId") Long listId, @Param("sourceIndex") int sourceIndex, @Param("destinationIndex") int destinationIndex);
+    void updatePositionsDown(@Param("listId") Long listId, @Param("sourceIndex") int sourceIndex, @Param("destinationIndex") int destinationIndex);
 
 }
