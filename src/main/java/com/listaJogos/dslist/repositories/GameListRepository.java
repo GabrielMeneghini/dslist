@@ -13,6 +13,12 @@ import java.util.List;
 @Repository
 public interface GameListRepository extends JpaRepository<GameList, Long> {
 
+    @Query("""
+            SELECT COUNT(b)
+            FROM Belonging b
+            WHERE b.id.gameList.id = :listId
+            """)
+    Long countByListId(@Param("listId") Long listId);
 
     @Query("""
             SELECT b.id.game.id
